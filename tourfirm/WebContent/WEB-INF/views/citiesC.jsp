@@ -27,7 +27,7 @@
 
       <c:forEach items="${citiesC}" var="City">
         <tr>
-          <td> ${City.getCity()}</td> <td><a href=${cities}>${City.getCountry()}</a></td>
+          <td> ${City.getCity()}</td> <td>${City.getCountry()}</td>
         </tr>
       </c:forEach>
 

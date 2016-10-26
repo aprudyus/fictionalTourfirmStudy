@@ -22,8 +22,8 @@ public class CityController {
         return "cities";
     }
 
-    @RequestMapping( value = "/citiesC", method = RequestMethod.GET)
-    public String CitiesC(Model model, @ModelAttribute String country){
+    @RequestMapping( value = "/country/{country}", method = RequestMethod.GET)
+    public String CitiesC(Model model, @PathVariable String country){
 
         model.addAttribute("citiesC", cityService.listCitiesC(country));
 
