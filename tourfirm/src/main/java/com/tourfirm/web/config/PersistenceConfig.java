@@ -17,6 +17,7 @@ import javax.sql.DataSource;
 import com.tourfirm.dao.impl.Impl;
 import com.tourfirm.domain.Entities;
 import com.tourfirm.service.CityService;
+import com.tourfirm.service.HotelService;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,12 +38,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         @PropertySource("config/jdbc.properties"),
         @PropertySource("config/hibernate.properties")})
 @ComponentScan(
-        basePackageClasses = {PersistenceConfig.class,
+        basePackageClasses = {  PersistenceConfig.class,
                                 WebAppConfig.class,
                                 WebAppInitializer.class,
                                 Entities.class,
                                 Impl.class,
-                                CityService.class})
+                                CityService.class,
+                                HotelService.class})
 public class PersistenceConfig {
 
     @Autowired
