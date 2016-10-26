@@ -9,7 +9,7 @@
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-<spring:url value="../citiesC" var="citiesC" />
+<spring:url value="country/${City.getCountry()}" var="citiesC" />
 <html>
 <body>
 <jsp:include page="main.jsp"></jsp:include>
@@ -28,6 +28,7 @@
             </tr>
         <c:forEach items="${cities}" var="City">
             <tr>
+                <spring:url value="country/${City.getCountry()}" var="citiesC" />
                 <td> ${City.getCity()}</td> <td><a href=${citiesC}>${City.getCountry()}</a></td>
             </tr>
         </c:forEach>
