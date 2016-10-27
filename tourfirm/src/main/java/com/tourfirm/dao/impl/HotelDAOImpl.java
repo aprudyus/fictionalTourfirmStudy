@@ -1,13 +1,12 @@
 package com.tourfirm.dao.impl;
 
-import com.tourfirm.dao.generic.CityDAO;
 import com.tourfirm.dao.generic.HotelDAO;
-import com.tourfirm.domain.City;
 import com.tourfirm.domain.Hotel;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
+
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -46,18 +45,17 @@ public class HotelDAOImpl extends AbstractDAO<Hotel,Integer> implements HotelDAO
     @Override
     public Integer save(Hotel entity){
 
-        return null;
+        return super.save(entity);
     }
 
     @Override
     public Hotel update(Hotel entity){
 
-        return null;
+        return super.update(entity);
     }
 
     @Override
     public void delete(Hotel entity){
-
-
+        super.delete(entity);
     }
 }

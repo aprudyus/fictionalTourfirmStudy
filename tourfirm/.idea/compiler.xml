@@ -25,5 +25,8 @@
         <module name="tourfirm" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tourfirm" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>

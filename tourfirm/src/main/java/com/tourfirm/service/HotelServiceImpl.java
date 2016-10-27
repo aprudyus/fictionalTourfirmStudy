@@ -1,7 +1,6 @@
 package com.tourfirm.service;
 
 
-import com.tourfirm.dao.generic.CityDAO;
 import com.tourfirm.dao.generic.HotelDAO;
 import com.tourfirm.domain.Hotel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,6 @@ public class HotelServiceImpl implements HotelService{
 
     public void delete(Hotel hotel){
         hotels.delete(hotel);
-
     }
 
     public List<Hotel> listHotels(){

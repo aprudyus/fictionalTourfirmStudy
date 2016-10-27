@@ -21,7 +21,7 @@ public class CityDAOImpl extends AbstractDAO<City,Integer> implements CityDAO {
     @Override
     public City findById(Integer id){
 
-        return null;
+        return super.findById(id);
     }
 
     @Override
@@ -43,18 +43,17 @@ public class CityDAOImpl extends AbstractDAO<City,Integer> implements CityDAO {
     @Override
     public Integer save(City entity){
 
-        return null;
+        return super.save(entity);
     }
 
     @Override
     public City update(City entity){
 
-        return null;
+        return super.update(entity);
     }
 
     @Override
     public void delete(City entity){
-
-
+        super.delete(entity);
     }
 }

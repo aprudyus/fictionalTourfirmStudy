@@ -7,6 +7,18 @@
     <groupId>com</groupId>
     <artifactId>tourfirm</artifactId>
     <version>1.0</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <packaging>war</packaging>
 
     <developers>
@@ -22,7 +34,7 @@
         <developer>
             <id>Anton</id>
             <name>Anton Prudyus</name>
-            <email></email>
+            <email>antonprudyus9747@gmail.com</email>
             <roles>
                 <role>developer</role>
             </roles>
