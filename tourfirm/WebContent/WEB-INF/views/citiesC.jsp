@@ -1,6 +1,3 @@
-<%@ page import="com.tourfirm.web.controller.CoreController" %>
-<%@ page import="com.tourfirm.domain.City" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page session="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

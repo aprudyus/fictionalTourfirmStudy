@@ -22,8 +22,9 @@ public class HotelDAOImpl extends AbstractDAO<Hotel,Integer> implements HotelDAO
 
     @Override
     public Hotel findById(Integer id){
-
-        return null;
+        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(entityClass);
+        criteria.add(Restrictions.idEq(id));
+        return (Hotel)criteria.uniqueResult();
     }
 
     @Override

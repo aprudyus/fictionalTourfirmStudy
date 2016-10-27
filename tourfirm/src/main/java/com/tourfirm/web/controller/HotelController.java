@@ -22,10 +22,18 @@ public class HotelController {
     }
 
     @RequestMapping( value = "/hotels/{city}", method = RequestMethod.GET)
-    public String CitiesC(Model model, @PathVariable String city){
+    public String HotelsC(Model model, @PathVariable String city){
 
         model.addAttribute("hotelsC", hotelService.listHotelsC(city));
 
         return "hotelsC";
+    }
+
+    @RequestMapping( value = "/hotel/{id}", method = RequestMethod.GET)
+    public String Hotel(Model model, @PathVariable Integer id){
+
+        model.addAttribute("hotel", hotelService.findById(id).toString());
+
+        return "hotel";
     }
 }

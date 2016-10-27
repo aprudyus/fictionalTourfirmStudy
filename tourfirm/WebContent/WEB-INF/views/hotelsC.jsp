@@ -17,12 +17,13 @@
 
     <table border="1">
       <tr>
-        <th>City</th> <th>Country</th>
+        <th>Hotel</th> <th>City</th>
       </tr>
 
       <c:forEach items="${hotelsC}" var="Hotel">
+        <spring:url value="../hotel/${Hotel.getId()}" var="hotel" />
         <tr>
-          <td>${Hotel.getHotel()}</td> <td>${Hotel.getCity()}</td>
+          <td><a href=${hotel}> ${Hotel.getHotel()}</a></td> <td>${Hotel.getCity()}</td>
         </tr>
       </c:forEach>
 

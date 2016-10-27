@@ -5,9 +5,8 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <html>
-<body>
 <jsp:include page="main.jsp"></jsp:include>
-
+<body>
 <div >
 
   <div>
@@ -23,7 +22,8 @@
       <c:forEach items="${hotels}" var="Hotel">
         <tr>
           <spring:url value="hotels/${Hotel.getCity()}" var="hotelsC" />
-          <td> ${Hotel.getHotel()}</td> <td><a href=${hotelsC}>${Hotel.getCity()}</a></td>
+          <spring:url value="hotel/${Hotel.getId()}" var="hotel" />
+          <td><a href=${hotel}> ${Hotel.getHotel()}</a></td> <td><a href=${hotelsC}>${Hotel.getCity()}</a></td>
         </tr>
       </c:forEach>
     </table>
