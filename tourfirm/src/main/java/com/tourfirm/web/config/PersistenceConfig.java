@@ -1,12 +1,3 @@
-/*
- * 
- * This is a simple web application utilizing Spring MVC and Hibernate.
- * Developed by Lv-205 group of Softserve Academy.
- * 
- * Copyright (c) 1993-2016 Softserve, Inc.
- * This software is the confidential and proprietary information of Softserve.
- *  
- */
 package com.tourfirm.web.config;
 
 
@@ -17,6 +8,7 @@ import javax.sql.DataSource;
 import com.tourfirm.dao.impl.Impl;
 import com.tourfirm.domain.Entities;
 import com.tourfirm.service.CityService;
+import com.tourfirm.service.ClientService;
 import com.tourfirm.service.HotelService;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
@@ -44,6 +36,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
                                 Entities.class,
                                 Impl.class,
                                 CityService.class,
+                                ClientService.class,
                                 HotelService.class})
 public class PersistenceConfig {
 

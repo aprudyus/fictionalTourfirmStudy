@@ -4,36 +4,29 @@
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-<spring:url value="../cities" var="cities" />
-<spring:url value="../hotels" var="hotels" />
+
+
 <html>
 
 <jsp:include page="main.jsp"></jsp:include>
-<body>
+
 <div >
 
   <div>
-    <h2>CITIES</h2>
+    <h2>CLIENTS</h2>
 
     <table border="1">
       <tr>
-        <th>City</th> <th>Country</th>
+        <th>First Name</th> <th>Last Name</th>
       </tr>
-
-      <c:forEach items="${citiesC}" var="City">
+      <c:forEach items="${clients}" var="Client">
         <tr>
-          <spring:url value="../hotels/${City.getCity()}" var="hotelsC" />
-          <td><a href=${hotelsC}>${City.getCity()}</a></td> <td>${City.getCountry()}</td>
+          <td>${Client.firstname}</td> <td>${Client.lastname}</td>
         </tr>
       </c:forEach>
-
-      <tr>
-        <td></td> <td> <a href=${cities}>All cities</a></td>
-      </tr>
-
     </table>
 
   </div>
 </div>
-</body>
+
 </html>

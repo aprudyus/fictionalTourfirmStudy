@@ -8,8 +8,8 @@ header{
 
 }
 
-body {
-     background-image: url("/WEB-INF/resources/images/cover.jpg");
+body{
+     background: url("//images/cover.jpg")  no-repeat;
      background-size: 100%;
  }
 
@@ -34,8 +34,26 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+li[class="li"] a:hover {
     background-color: #111;
+}
+
+li[class="li2"] a:hover {
+    background-color: #8A2BE2;
+    margin-right: auto;
+}
+
+li button:hover {
+    background-color: #8A2BE2;
+}
+li button{
+    background-color: darkslategrey;
+    margin: 0px;
+    border-spacing: 0px;
+    display: block;
+    color: #111111;
+    text-align: center;
+    text-decoration: none;
 }
 table{
 

@@ -1,8 +1,3 @@
-<%@ page import="com.tourfirm.web.controller.CoreController" %>
-<%@ page import="com.tourfirm.domain.City" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="com.tourfirm.web.controller.CityController" %>
-<%@ page import="org.springframework.ui.Model" %>
 <%@ page session="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -11,9 +6,9 @@
 
 
 <html>
-<body>
-<jsp:include page="main.jsp"></jsp:include>
 
+<jsp:include page="main.jsp"></jsp:include>
+<body class="mypage">
 <div >
 
     <div>
@@ -28,16 +23,14 @@
             </tr>
         <c:forEach items="${cities}" var="City">
             <tr>
-                <spring:url value="cities/${City.getCountry()}" var="citiesC" />
-                <spring:url value="hotels/${City.getCity()}" var="hotelsC" />
-                <td><a href=${hotelsC}>${City.getCity()}</a></td> <td><a href=${citiesC}>${City.getCountry()}</a></td>
+                <spring:url value="cities/${City.country}" var="citiesC" />
+                <spring:url value="hotels/${City.city}" var="hotelsC" />
+                <td><a href=${hotelsC}>${City.city}</a></td> <td><a href=${citiesC}>${City.country}</a></td>
             </tr>
         </c:forEach>
         </table>
 
     </div>
 </div>
-
-
 </body>
 </html>

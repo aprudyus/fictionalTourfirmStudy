@@ -7,8 +7,9 @@
 <spring:url value="../cities" var="cities" />
 <spring:url value="../hotels" var="hotels" />
 <html>
-<body>
 <jsp:include page="main.jsp"></jsp:include>
+
+<body>
 
 <div >
 

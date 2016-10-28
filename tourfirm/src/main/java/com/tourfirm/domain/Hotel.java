@@ -15,11 +15,32 @@ public class Hotel {
     @Column(name = "hotel")
     private String hotel;
 
+    @Column(name = "datefrom")
+    private Date datefrom;
+
+    @Column(name = "datetill")
+    private Date datetill;
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    public void setDatefrom(Date toSet){
+        this.datefrom = toSet;
+    }
+
+    public Date getDatefrom() {
+        return this.datefrom;
+    }
+
+    public void setDatetill(Date toSet){
+        this.datetill = toSet;
+    }
+
+    public Date getDatetill() {
+        return this.datetill;
+    }
 
     public Integer getId(){
         return this.id;
@@ -48,7 +69,7 @@ public class Hotel {
 
     @Override
     public String toString(){
-        return this.getHotel()+", "+this.getCity();
-
+        System.out.println("Hotel" + this.getHotel() + "\n Located in" + this.getCity() + " \nRooms available from" + this.getDatefrom() + " to " + this.getDatetill());
+        return "Hotel"+ this.getHotel()+"\nLocated in" + this.getCity()+" \nRooms available from "+this.getDatefrom()+" to "+this.getDatetill();
     }
 }

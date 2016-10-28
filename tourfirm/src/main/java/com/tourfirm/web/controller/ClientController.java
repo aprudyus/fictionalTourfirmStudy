@@ -1,31 +1,28 @@
 package com.tourfirm.web.controller;
 
 
-import com.tourfirm.domain.Hotel;
-import com.tourfirm.service.HotelService;
+import com.tourfirm.service.CityService;
+import com.tourfirm.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.ManyToOne;
-import java.util.List;
-
 @Controller
-public class HotelController {
+public class ClientController {
 
     @Autowired
-    private HotelService hotelService;
+    private ClientService clientService;
 
-    @GetMapping("/hotels")
-    public String Hotels(Model model){
+    @GetMapping("/clients")
+    public String Clients(Model model){
 
-        model.addAttribute("hotels",hotelService.listHotels());
+        model.addAttribute("clients",clientService.listClients());
 
-        return "hotels";
+        return "clients";
     }
 
-    @RequestMapping( value = "/hotels/{city}", method = RequestMethod.GET)
+    /*@RequestMapping( value = "/hotels/{city}", method = RequestMethod.GET)
     public String HotelsC(Model model, @PathVariable String city){
 
         model.addAttribute("hotelsC", hotelService.listHotelsC(city));
@@ -39,5 +36,5 @@ public class HotelController {
         model.addAttribute("hotel", hotelService.findById(id));
 
         return "hotel";
-    }
+    }*/
 }
